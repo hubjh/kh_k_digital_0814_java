@@ -22,4 +22,5 @@ public class BitOperate {
         System.out.println(num1 << 1);  // x 2 효과   성능이 빠르다
         System.out.println(num1 >> 1);  // / 2 효과   성능이 빠르다
     }
+    // good
 }
