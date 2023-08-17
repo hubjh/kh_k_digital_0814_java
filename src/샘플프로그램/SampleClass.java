@@ -12,4 +12,6 @@ public class SampleClass {  // 파스칼
     public static void main(String[] args) {
         System.out.println("아무거나 출력");
     }
+    
+    // happy
 }
