@@ -23,7 +23,6 @@ public class ConditionEx1 {
 //        } else {
 //            System.out.println(num + "는 100과 같습니다.");
 //        }
-        
 
         System.out.print("문자를 입력 하세요 : ");
         Scanner sc = new Scanner(System.in);
@@ -35,6 +34,6 @@ public class ConditionEx1 {
         } else {
             System.out.println(ch + "는 알파벳이 아닙니다.");
         }
-
+        
     }
 }
