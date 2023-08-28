@@ -6,7 +6,6 @@ Purpose : 상속을 이용한 자바 자동차 만들기 프로그램입니다.
  */
 import java.util.Objects;
 import java.util.Scanner;
-
 public class CarMain {
     public static void main(String[] args) {
         int regions[] = {0, 400, 200, 150, 300};
@@ -21,15 +20,15 @@ public class CarMain {
             case 1:
                 SportsCar tc = new SportsCar("페라리");
                 if (Objects.equals(function, "on") || Objects.equals(function, "ON")) tc.setTurbo();
-                tc.print(distance, numOfPas); break;
+                tc.state(); tc.print(distance, numOfPas); break;
             case 2:
                 PassengerCar pc = new PassengerCar("SM5");
                 if (Objects.equals(function, "on") || Objects.equals(function, "ON")) pc.setTrunk();
-                pc.print(distance, numOfPas); break;
+                pc.state(); pc.print(distance, numOfPas); break;
             case 3:
                 Bus bc = new Bus("마을 버스");
                 if (Objects.equals(function, "on") || Objects.equals(function, "ON")) bc.setSubFuel();
-                bc.print(distance, numOfPas); break;
+                bc.state(); bc.print(distance, numOfPas); break;
         }
     }
 }

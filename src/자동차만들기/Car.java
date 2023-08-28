@@ -17,7 +17,7 @@ Purpose : 상속을 이용한 자바 자동차 만들기 프로그램입니다.
 //        - 연료탱크 크기
 //        - 좌석수
 //        - 차량이름
-abstract class Car {
+abstract class Car implements CarFrame {
 
     int oilPrice = 2000;
     // 속도
@@ -37,5 +37,19 @@ abstract class Car {
         System.out.println("연료탱크 크기 : " + capacity + "L");
         System.out.println("좌석 수 : " + numSeats + "개");
     }
-    public void print() {}
+    public void print(int distance, int numOfPas) {
+        int totalDistance, totalRefuel, totalPrice;
+        double travelTime;
+        // 총 거리
+        totalDistance = distance * ((numOfPas/ numSeats) + 1);
+        // 총 주유 횟수
+        totalRefuel = totalDistance / (capacity * mileage) + 1;
+        // 총 비용
+        totalPrice = totalDistance / mileage * oilPrice;
+        // 총 이동 시간
+        travelTime = (double) totalDistance / speed;
+        System.out.println("총 비용 : " + totalPrice);
+        System.out.println("총 주유 횟수 : " + totalRefuel);
+        System.out.println("총 이동 시간 : " + (int)(travelTime / 1) + "시간 " + (int)((travelTime % 1) * 60) + "분");
+    }
 }
