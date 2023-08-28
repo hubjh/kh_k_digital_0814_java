@@ -29,6 +29,10 @@ public class PassengerCar extends Car {
             trunk = true;
         }
     }
+    @Override
+    public void state() {
+        System.out.println("=".repeat(5) + carName + "=".repeat(5));
+    }
 
     @Override
     public void print() {}
