@@ -18,15 +18,15 @@ public class CarMain {
         int distance = regions[region];
         switch (vehicle) {
             case 1:
-                SportsCar tc = new SportsCar("페라리");
+                SportsCar tc = new SportsCar("Ferrari");
                 if (Objects.equals(function, "on") || Objects.equals(function, "ON")) tc.setTurbo();
                 tc.state(); tc.print(distance, numOfPas); break;
             case 2:
-                PassengerCar pc = new PassengerCar("SM5");
+                PassengerCar pc = new PassengerCar("GV80");
                 if (Objects.equals(function, "on") || Objects.equals(function, "ON")) pc.setTrunk();
                 pc.state(); pc.print(distance, numOfPas); break;
             case 3:
-                Bus bc = new Bus("마을 버스");
+                Bus bc = new Bus("관광버스");
                 if (Objects.equals(function, "on") || Objects.equals(function, "ON")) bc.setSubFuel();
                 bc.state(); bc.print(distance, numOfPas); break;
         }
