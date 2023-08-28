@@ -1,4 +1,5 @@
 package 자동차만들기;
+
 /*
 Date : 2023-08-28
 Author : J.H.Hwang
@@ -15,6 +16,7 @@ Purpose : 상속을 이용한 자바 자동차 만들기 프로그램입니다.
 public class SportsCar extends Car {
     String carName;
     boolean turbo = false;
+
     SportsCar(String carName) {
         this.mileage = 8;
         this.speed = 250;
@@ -22,18 +24,21 @@ public class SportsCar extends Car {
         this.numSeats = 2;
         this.carName = carName;
     }
+
     public void setTurbo() {
-        if(!turbo) {
-            speed = (int)(speed * 1.2);
+        if (!turbo) {
+            speed = (int) (speed * 1.2);
             System.out.println(carName + "의 터보기능을 켭니다.");
             turbo = true;
         }
     }
+
     @Override
     public void state() {
         System.out.println("=".repeat(5) + carName + "=".repeat(5));
     }
 
     @Override
-    public void print() {}
+    public void print() {
+    }
 }
