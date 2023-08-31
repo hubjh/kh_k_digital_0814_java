@@ -16,7 +16,6 @@ public class CoffeeMenuList {
     public static void main(String[] args) {
         makeMenu();     // 같은 클래스 내에 있어서 클래스 이름을 안적어도 된다.
         CoffeeMenuList.selectMenu();    // == selectMenu();
-
     }
     static void makeMenu() {
         menuInfoMap.put("Americano", new MenuInfo("Americano", 2500, "Coffee", "기본커피"));
