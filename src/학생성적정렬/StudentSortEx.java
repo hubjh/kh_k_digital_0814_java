@@ -13,13 +13,13 @@ public class StudentSortEx {
     public static void main(String[] args) {
         TreeSet<Student> student = new TreeSet<>();
 //        List<Student> student = new ArrayList<>();
-        student.add(new Student("aaa", 95));
-        student.add(new Student("bbb", 77));
-        student.add(new Student("cc", 88));
-        student.add(new Student("ddd", 66));
-        student.add(new Student("ee", 33));
-        student.add(new Student("ffff", 89));
+        student.add(new Student("대한민국", 95));
+        student.add(new Student("미국", 77));
+        student.add(new Student("일본", 88));
+        student.add(new Student("영국", 66));
+        student.add(new Student("중국", 33));
+        student.add(new Student("호주", 89));
 
-        for(Student e : student) System.out.println(e.grade + " " + e.name);
+        for(Student e : student) System.out.println(e.name + " " + e.grade);
     }
 }
