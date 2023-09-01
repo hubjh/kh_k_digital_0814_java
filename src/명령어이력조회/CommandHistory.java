@@ -27,9 +27,20 @@ public class CommandHistory {
                 System.out.println("q/Q - 프로그램 종료");
                 System.out.println("history - 최근 입력한 명령어를 " + MAX_SIZE + "개 보여 줍니다.");
             } else if(cmd.equalsIgnoreCase("history")) {
-                
+                history.save(cmd);
+                int cnt = 0;
+                for(String e : history.queue) {
+                    cnt++;
+                    System.out.println(cnt + " " + e);
+                }
+            } else {
+                history.save(cmd);      // 입력 할때 마다 CLI에 명령어 출력 해주는 부분
+                System.out.println(cmd);
             }
         }
-
+    }
+    void save(String cmd) {
+        queue.offer(cmd);
+        if(queue.size() > MAX_SIZE) queue.remove(); // 큐의 사이즈가 정한 MAX_SIZE보다 크면 맨 앞의 요소 제거
     }
 }
