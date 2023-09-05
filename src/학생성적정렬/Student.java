@@ -1,7 +1,8 @@
 package 학생성적정렬;
 
 public class Student implements Comparable<Student> {
-    String name;
+    public String name;
+    public String totalGrade;
     int grade;
 
     public Student(String name, int grade) {

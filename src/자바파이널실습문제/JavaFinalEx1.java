@@ -1,5 +1,7 @@
 package 자바파이널실습문제;
 
+import 자바파이널실습문제.Student;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -20,23 +22,27 @@ public class JavaFinalEx1 {
         assert inputStream != null;
         Scanner sc = new Scanner(inputStream);
 
-        HashMap<String,Integer> map = new HashMap<>();
+//        HashMap<String,Integer> map = new HashMap<>();
 
+        TreeSet<Student> student = new TreeSet<>();
         while (sc.hasNext()) {  // 읽을 내용이 있으면 참이 됨
             String line = sc.nextLine();    // 문자열을 '\n' 을 기준으로 읽음
             String[] spLine = line.split(" ");
             String name = spLine[0];   // 이름
             int totalScore = (Integer.parseInt(spLine[1]) + Integer.parseInt(spLine[2]) +Integer.parseInt(spLine[3]));
-            map.put(name, totalScore);
+
+//            map.put(name, totalScore);
+            student.add(new Student(name, totalScore));
+//        }
+//        List<Integer> valueList = new ArrayList<>(map.values());
+//        valueList.sort(Collections.reverseOrder());
+//        for(Integer value : valueList) {
+//            for (String key : map.keySet()) {
+//                if (map.get(key) == value) {
+//                    System.out.println("total : " + value + " | name : " + key);
+//                }
+//            }
         }
-        List<Integer> valueList = new ArrayList<>(map.values());
-        valueList.sort(Collections.reverseOrder());
-        for(Integer value : valueList) {
-            for (String key : map.keySet()) {
-                if (map.get(key) == value) {
-                    System.out.println("total : " + value + " | name : " + key);
-                }
-            }
-        }
+        for (Student e: student) System.out.println(e.name + " " + e.totalGrade);
     }
 }
