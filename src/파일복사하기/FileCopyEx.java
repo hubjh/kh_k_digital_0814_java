@@ -13,7 +13,7 @@ Purpose :  파일 복사를 설명하는 프로그램입니다.
 public class FileCopyEx {
     public static void main(String[] args) throws IOException {
         String originFileName = "src/파일복사하기/bearimage.jpeg";
-        String targetFileName = "src/파일복사하기/bear.jpeg";
+        String targetFileName = "src/파일복사하기/copybear.jpeg";
 
         FileInputStream fis = new FileInputStream(originFileName);
         FileOutputStream fos = new FileOutputStream(targetFileName);
