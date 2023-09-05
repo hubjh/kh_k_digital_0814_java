@@ -37,7 +37,7 @@ public class ByteStreamEx {
             for(int i = 0; i < readNum; i++) {
                 System.out.println((buffer[i]));
             }
-            is.close();
         }
+        is.close();
     }
 }
