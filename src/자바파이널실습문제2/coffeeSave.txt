@@ -1,0 +1,6 @@
+Espresso, Espresso, 3000, Coffee, 진한커피
+Americano, Americano, 2500, Coffee, 기본커피
+Latte, Latte, 4000, Coffee, 우유 포함
+makeCoffee, makeCoffee, 2000, coffee, 커피
+milktea, milktea, 4000, tea, 밀크티입니다.
+hambuger, hambuger, 6000, burger, 햄버거
