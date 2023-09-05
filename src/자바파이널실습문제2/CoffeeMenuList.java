@@ -21,27 +21,30 @@ public class CoffeeMenuList {
     }
     static void makeMenu() {        // 파일 입력 =========
         String fileName = "src/자바파이널실습문제2/coffeeSave.txt";
-
         try {
             Scanner sc = new Scanner(new File(fileName));
+
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();
                 String[] txtFile = line.split(",");
                 menuInfoMap.put(
                         txtFile[0].trim(),
-                        new MenuInfo(txtFile[1].trim(),
+                        new MenuInfo(
+                                txtFile[1].trim(),
                                 Integer.parseInt(txtFile[2].trim()),
                                 txtFile[3].trim(),
                                 txtFile[4].trim()
                         ));
+
+
             }
         } catch (IOException e) {
-            e.printStackTrace();
         }
-
-//        menuInfoMap.put("Americano", new MenuInfo("Americano", 2500, "Coffee", "기본커피"));
-//        menuInfoMap.put("Espresso", new MenuInfo("Espresso", 3000, "Coffee", "진한커피"));
-//        menuInfoMap.put("Latte", new MenuInfo("Latte", 4000, "Coffee", "우유 포함"));
+        if (menuInfoMap.size() <= 0) {
+            menuInfoMap.put("Americano", new MenuInfo("Americano", 2500, "Coffee", "기본커피"));
+            menuInfoMap.put("Espresso", new MenuInfo("Espresso", 3000, "Coffee", "진한커피"));
+            menuInfoMap.put("Latte", new MenuInfo("Latte", 4000, "Coffee", "우유 포함"));
+                }
     }
     public static <FileOutputStream, BufferedWriter> void selectMenu() throws IOException {
         Scanner sc = new Scanner(System.in);
@@ -124,7 +127,8 @@ public class CoffeeMenuList {
                     String txtStream = "";
                     String filename = "src/자바파이널실습문제2/coffeeSave.txt";
                     for (String e : menuInfoMap.keySet()) {
-                        txtStream += (e + ", "
+                        txtStream += (
+                                e + ", "
                                 + menuInfoMap.get(e).name + ", "
                                 + menuInfoMap.get(e).price + ", "
                                 + menuInfoMap.get(e).category + ", "

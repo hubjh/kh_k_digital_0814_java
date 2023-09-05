@@ -2,10 +2,7 @@ package 자바파이널실습문제;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /*
 Date : 2023-09-05
@@ -33,7 +30,7 @@ public class JavaFinalEx1 {
             map.put(name, totalScore);
         }
         List<Integer> valueList = new ArrayList<>(map.values());
-        valueList.sort(Integer::compareTo);
+        valueList.sort(Collections.reverseOrder());
         for(Integer value : valueList) {
             for (String key : map.keySet()) {
                 if (map.get(key) == value) {
