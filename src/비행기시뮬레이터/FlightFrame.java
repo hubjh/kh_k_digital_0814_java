@@ -5,9 +5,17 @@ public interface FlightFrame {
     final int FLY_MIN_SPEED = 250;
     final int MAX_SPEED = 300;
 
+    void engine_on();
+
+    void engine_off();
+
+    void engine() throws InterruptedException;
 
     void speedUp();
+
     void speedDown();
+
     void takeOff();
+
     void landing();
 }
