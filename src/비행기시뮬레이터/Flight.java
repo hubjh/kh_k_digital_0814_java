@@ -33,7 +33,7 @@ public class Flight implements FlightFrame {
     @Override
     public void speedUp() {
         System.out.println("속도를 올립니다.");
-        accel = 5;
+        accel = 50;
 
     }
 
